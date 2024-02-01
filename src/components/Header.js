@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 
 export default function Header({loggedIn, loggingOut}) {
   return (
-    <header>
+    <header className='mb-10'>
       <Navbar loggedIn={loggedIn} loggingOut={loggingOut} />
     </header>
   )

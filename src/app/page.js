@@ -17,7 +17,7 @@ export default function Home() {
     setUserLoggedIn(false);
   }
   return (
-    <main className="flex min-h-screen flex-col items-center justify-around p-24">
+    <main className="w-full flex min-h-screen flex-col items-center justify-evenly">
       <Header loggedIn={userLoggedIn} loggingOut={userLoggedOutHandler} />
       {
         userLoggedIn ? (

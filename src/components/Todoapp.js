@@ -95,7 +95,7 @@ export default function Todoapp() {
             if (!todoSnapshot.empty) {
                 const docTodUpdate = todoSnapshot.docs[0].ref;
                 await updateDoc(docTodUpdate, {
-                status: true
+                status: false
             });
         }
         } catch(e) {
@@ -110,7 +110,7 @@ export default function Todoapp() {
             if (!todoSnapshot.empty) {
                 const docTodUpdate = todoSnapshot.docs[0].ref;
                 await updateDoc(docTodUpdate, {
-                status: false
+                status: true
             });
         }
         } catch(e) {

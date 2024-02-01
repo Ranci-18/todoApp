@@ -103,7 +103,7 @@ export default function Todoapp() {
         }
     }
 
-    async function inCompleteTask(id) {
+    async function incompleteTask(id) {
         try {
             const todoSnapshot = await getDocs(query(collection(db, "todos"), where("docId", "==", id)));
 
@@ -143,10 +143,10 @@ export default function Todoapp() {
                 </div>
                 <div>
                 {
-                    todo.status === true ? 
-                        (<button className='bg-green-600 rounded-md' onClick={() => completeTask(todo.docId)}>Task Completed</button>)
+                    todo.status === false ? 
+                        (<button className='bg-red-600 rounded-md' onClick={() => incompleteTask(todo.docId)}>Task Not Completed</button>)
                         :
-                        (<button className='bg-red-600 rounded-md' onClick={() => inCompleteTask(todo.docId)}>Task Not Completed</button>)
+                        (<button className='bg-green-600 rounded-md' onClick={() => completeTask(todo.docId)}>Task Completed</button>)
                 }
                 <button className='bg-red-600 rounded-md ml-2' onClick={() => deleteTodo(todo.docId)}>Delete</button>
                 </div>

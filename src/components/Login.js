@@ -20,10 +20,10 @@ export default function Login({ userLoggingIn }) {
   return (
     <div className='border-solid border-2 border-neutral-800 flex flex-col items-center w-3/5'>
         <h1 className='text-2xl font-bold mb-4'>Login</h1>
-        <label className='mb-2 w-4/5'>
+        <label htmlFor='loginEmail' className='mb-2 w-4/5'>
             <p>Email</p>
             <input type="email"
-                id='email'
+                id='loginEmail'
                 className='w-full'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}

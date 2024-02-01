@@ -20,10 +20,10 @@ export default function Signup() {
   return (
     <div className='border-solid border-2 border-neutral-800 flex flex-col items-center w-3/5'>
         <h1 className='text-2xl font-bold mb-4'>Sign Up</h1>
-        <label className='mb-2 w-4/5'>
+        <label htmlFor='signupEmail' className='mb-2 w-4/5'>
             <p>Email</p>
             <input type="email"
-                id='email'
+                id='signupEmail'
                 className='w-full'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}

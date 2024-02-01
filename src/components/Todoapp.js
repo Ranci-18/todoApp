@@ -90,14 +90,16 @@ export default function Todoapp() {
 
     async function completeTask(id) {
         try {
-            const todoSnapshot = await getDocs(query(collection(db, "todos"), where("docId", "==", id)));
+            if (user) {
+                const todoSnapshot = await getDocs(query(collection(db, "todos"), where("docId", "==", id)));
 
-            if (!todoSnapshot.empty) {
-                const docTodUpdate = todoSnapshot.docs[0].ref;
-                await updateDoc(docTodUpdate, {
-                status: false
-            });
-        }
+                if (!todoSnapshot.empty) {
+                    const docTodUpdate = todoSnapshot.docs[0].ref;
+                    await updateDoc(docTodUpdate, {
+                    status: false
+                });
+                }
+            }
         } catch(e) {
             alert('Error completing task: ' + e.message);
         }
@@ -105,14 +107,16 @@ export default function Todoapp() {
 
     async function incompleteTask(id) {
         try {
-            const todoSnapshot = await getDocs(query(collection(db, "todos"), where("docId", "==", id)));
+            if (user) {
+                const todoSnapshot = await getDocs(query(collection(db, "todos"), where("docId", "==", id)));
 
-            if (!todoSnapshot.empty) {
-                const docTodUpdate = todoSnapshot.docs[0].ref;
-                await updateDoc(docTodUpdate, {
-                status: true
-            });
-        }
+                if (!todoSnapshot.empty) {
+                    const docTodUpdate = todoSnapshot.docs[0].ref;
+                    await updateDoc(docTodUpdate, {
+                    status: true
+                });
+                }
+            }
         } catch(e) {
             alert('Error completing task: ' + e.message);
         }

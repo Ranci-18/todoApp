@@ -29,11 +29,11 @@ export default function Signup() {
                 onChange={(e) => setEmail(e.target.value)}
             />
         </label>
-        <label className='mb-2 w-4/5' htmlFor='password'>
+        <label className='mb-2 w-4/5' htmlFor='signupPassword'>
             <p>Password</p>
             <input type="password"
                 className='w-full'
-                id='password'
+                id='signupPassword'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
              />

@@ -29,11 +29,11 @@ export default function Login({ userLoggingIn }) {
                 onChange={(e) => setEmail(e.target.value)}
             />
         </label>
-        <label className='mb-2 w-4/5' htmlFor='password'>
+        <label className='mb-2 w-4/5' htmlFor='signinPassword'>
             <p>Password</p>
             <input type="password"
                 className='w-full'
-                id='password'
+                id='siginPassword'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
              />

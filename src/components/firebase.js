@@ -17,11 +17,11 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-if (typeof window !== "undefined" && isSupported()) {
+/* if (typeof window !== "undefined" && isSupported()) {
   const analytics = getAnalytics(app);
 } else {
   console.warn("Firebase analytics is not supported in this browser.");
-}
+}*/
 const app = initializeApp(firebaseConfig);
 
 

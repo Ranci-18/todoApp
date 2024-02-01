@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "predeploy": "next build && next export",
+    "deploy": "gh-pages -d out -b main",
     "start": "next start",
     "lint": "next lint"
   },
